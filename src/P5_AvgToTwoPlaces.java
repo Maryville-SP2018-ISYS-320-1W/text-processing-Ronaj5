@@ -4,11 +4,15 @@
 	Date: 
 */
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class P5_AvgToTwoPlaces {
 
 	public static void main(String[] args) {
+		
+		DecimalFormat df2 = new DecimalFormat(".##");
+		
 		Scanner input = new Scanner( System.in );
 		System.out.println("This program computes the average of a series of numbers.");
 		
@@ -24,7 +28,7 @@ public class P5_AvgToTwoPlaces {
 			sum += nextInputValue;
 		}
 		
-		System.out.println("The average value is: " + sum / numbers);
+		System.out.println("The average value is: " + df2.format(sum / numbers));
 	}
 
 }
